@@ -87,6 +87,11 @@ section { padding: 72px 0; border-bottom: 1px solid var(--line); }
 
 .shots { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; margin-top: 36px; }
 .shots img { width: 100%; height: auto; display: block; border: 1px solid var(--line); }
+.maps { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: 14px; margin-top: 36px; align-items: start; }
+.maps figure { margin: 0; min-width: 0; }
+.maps img { width: 100%; height: auto; display: block; border: 1px solid var(--line); }
+.maps figcaption { color: var(--dim); font-size: 16px; margin-top: 8px; }
+.maps-head { font-size: 20px; color: var(--gold); margin-top: 44px; }
 
 .studio { display: grid; grid-template-columns: 160px 1fr; gap: 32px; align-items: center; }
 .studio img { width: 160px; height: auto; }
@@ -114,6 +119,7 @@ footer { padding: 28px 0 40px; color: var(--dim); font-size: 15px; text-align: c
   section { padding: 52px 0; }
   .cols { grid-template-columns: 1fr; gap: 24px; }
   .shots { grid-template-columns: 1fr; }
+  .maps { grid-template-columns: 1fr; }
   .studio { grid-template-columns: 1fr; text-align: center; }
   .studio img { margin: 0 auto; width: 130px; }
   .lead { font-size: 21px; }
@@ -179,6 +185,18 @@ footer { padding: 28px 0 40px; color: var(--dim); font-size: 15px; text-align: c
         <img src="assets/shot2.jpg" alt="Wickerwood: a fight at night" loading="lazy">
         <img src="assets/shot3.jpg" alt="Wickerwood: a boss, frozen" loading="lazy">
         <img src="assets/shot4.jpg" alt="Wickerwood: the world from above" loading="lazy">
+      </div>
+
+      <h3 class="maps-head">A map you chart as you go</h3>
+      <div class="maps">
+        <figure>
+          <img src="assets/map-full.jpg" alt="Wickerwood: the full map, part charted, with a legend" loading="lazy">
+          <figcaption>The map fills in as you explore, and stays filled in from one run to the next. Clues point to circles on it.</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/map-chart.jpg" alt="Wickerwood: the whole land, drawn in ink on parchment" loading="lazy">
+          <figcaption>The whole Wickerwood, once every corner has been charted.</figcaption>
+        </figure>
       </div>
       <p style="color: var(--dim); margin-top: 18px;">An early build: everything you see is work in progress. A Steam page is coming.</p>
     </div>
