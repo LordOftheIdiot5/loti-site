@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Loti Studios</title>
+<meta name="description" content="Loti Studios is an independent game studio from Norway. Now making Wickerwood, a folk-horror defence game.">
+<meta property="og:title" content="Loti Studios">
+<meta property="og:description" content="An independent game studio from Norway. Now making Wickerwood.">
+<meta property="og:image" content="https://loti.nordl.dev/assets/og.jpg">
+<meta property="og:url" content="https://loti.nordl.dev/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@LotiStudios">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Crimson+Pro:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #0b0a08;
+  --panel: #15120e;
+  --line: #3a2e1f;
+  --ink: #ece2cd;
+  --dim: #b3a88f;
+  --gold: #e8bf6a;
+  --ember: #d9772c;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font: 400 19px/1.6 "Crimson Pro", Georgia, serif;
+  -webkit-font-smoothing: antialiased;
+}
+a { color: var(--gold); text-decoration: none; }
+a:hover { text-decoration: underline; }
+.wrap { max-width: 1080px; margin: 0 auto; padding: 0 16px; }
+h1, h2, h3 { font-family: "Cinzel", Georgia, serif; font-weight: 700; letter-spacing: 0.04em; margin: 0; }
+nav {
+  position: sticky; top: 0; z-index: 10;
+  background: rgba(11, 10, 8, 0.86);
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid var(--line);
+}
+nav .wrap { display: flex; align-items: center; justify-content: space-between; height: 60px; }
+nav .brand { display: flex; align-items: center; gap: 10px; font-family: "Cinzel", serif; color: var(--ink); font-weight: 700; letter-spacing: 0.08em; }
+nav .brand img { height: 34px; width: auto; }
+nav .links a { margin-left: 22px; color: var(--dim); font-size: 17px; }
+nav .links a:hover { color: var(--gold); text-decoration: none; }
+
+.hero {
+  position: relative;
+  min-height: 78vh;
+  display: flex; align-items: center; justify-content: center;
+  text-align: center;
+  background: linear-gradient(180deg, rgba(11,10,8,0.55), rgba(11,10,8,0.8) 70%, var(--bg)), url("assets/hero.jpg") center / cover no-repeat;
+  border-bottom: 1px solid var(--line);
+}
+.hero img.logo { width: min(420px, 78vw); height: auto; filter: drop-shadow(0 10px 40px rgba(232, 191, 106, 0.25)); }
+.hero h1 { font-size: clamp(34px, 6vw, 58px); color: var(--gold); margin-top: 6px; }
+.hero p { color: var(--dim); font-size: 21px; margin: 8px 0 0; }
+
+section { padding: 72px 0; border-bottom: 1px solid var(--line); }
+.kicker { font-family: "Cinzel", serif; color: var(--ember); letter-spacing: 0.18em; font-size: 14px; }
+.game-head { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 12px; margin-bottom: 20px; }
+.game-head h2 { font-size: clamp(38px, 6vw, 60px); color: var(--ink); }
+.badge { border: 1px solid var(--gold); color: var(--gold); padding: 4px 12px; font-family: "Cinzel", serif; font-size: 14px; letter-spacing: 0.12em; }
+.lead { font-size: 23px; color: var(--ink); max-width: 780px; }
+.lead em { color: var(--gold); font-style: italic; }
+
+.video {
+  margin: 28px 0;
+  border: 1px solid var(--line);
+  background: #000;
+  aspect-ratio: 16 / 9;
+}
+.video video { width: 100%; height: 100%; display: block; }
+
+.cols { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 32px; }
+.cols ul { margin: 10px 0 0; padding-left: 20px; }
+.cols li { margin: 6px 0; color: var(--ink); }
+.cols li::marker { color: var(--ember); }
+.cols h3 { font-size: 20px; color: var(--gold); }
+.cols p { margin: 10px 0 0; color: var(--dim); }
+
+.shots { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; margin-top: 36px; }
+.shots img { width: 100%; height: auto; display: block; border: 1px solid var(--line); }
+
+.studio { display: grid; grid-template-columns: 160px 1fr; gap: 32px; align-items: center; }
+.studio img { width: 160px; height: auto; }
+.studio h2 { font-size: 34px; color: var(--gold); }
+.studio p { color: var(--ink); margin: 10px 0 0; }
+
+.follow { text-align: center; }
+.follow h2 { font-size: 30px; }
+.follow p { color: var(--dim); }
+.btn {
+  display: inline-block; margin-top: 18px;
+  border: 1px solid var(--gold); color: var(--bg); background: var(--gold);
+  padding: 12px 26px; font-family: "Cinzel", serif; font-weight: 700; letter-spacing: 0.1em;
+}
+.btn:hover { background: #f3d18a; text-decoration: none; }
+
+footer { padding: 28px 0 40px; color: var(--dim); font-size: 15px; text-align: center; }
+
+@media (max-width: 520px) {
+  nav .brand span { display: none; }
+}
+@media (max-width: 760px) {
+  body { font-size: 18px; }
+  nav .links a { margin-left: 14px; font-size: 16px; }
+  section { padding: 52px 0; }
+  .cols { grid-template-columns: 1fr; gap: 24px; }
+  .shots { grid-template-columns: 1fr; }
+  .studio { grid-template-columns: 1fr; text-align: center; }
+  .studio img { margin: 0 auto; width: 130px; }
+  .lead { font-size: 21px; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a class="brand" href="#top"><img src="assets/logo.webp" alt="Loti Studios"><span>LOTI STUDIOS</span></a>
+    <div class="links">
+      <a href="#wickerwood">Wickerwood</a>
+      <a href="#studio">Studio</a>
+      <a href="https://x.com/LotiStudios" rel="noopener">X</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <img class="logo" src="assets/logo.webp" alt="Loti Studios">
+    <h1>Loti Studios</h1>
+    <p>An independent game studio from Norway</p>
+  </div>
+</header>
+
+<main>
+  <section id="wickerwood">
+    <div class="wrap">
+      <div class="kicker">NOW MAKING</div>
+      <div class="game-head">
+        <h2>Wickerwood</h2>
+        <span class="badge">IN DEVELOPMENT · PC</span>
+      </div>
+      <p class="lead">A folk-horror defence game. By day you build, raid what the woods are hiding and talk to the few who are left. By night the masked swarm comes out of the trees, and you hold the village fire. <em>Night after night.</em></p>
+
+      <div class="video">
+        <video src="assets/wickerwood-clip.mp4" poster="assets/wickerwood-poster.jpg" controls muted playsinline loop preload="metadata"></video>
+      </div>
+
+      <div class="cols">
+        <div>
+          <h3>By day</h3>
+          <ul>
+            <li>Build houses and farms, and place the towers you earn each dawn anywhere on open ground</li>
+            <li>Raid guarded camps, caves and a ruined castle for gear, relics and gold</li>
+            <li>Talk to a smith, a merchant, a hermit and a ghost for clues to legendary weapons</li>
+          </ul>
+        </div>
+        <div>
+          <h3>By night</h3>
+          <ul>
+            <li>Fight with sword, spear, axe, bow and crossbow, a shield and spells</li>
+            <li>Block, parry, break their guard, and lock on to the one that matters</li>
+            <li>A boss every fifth night. Sometimes the one in the boss's mask is only pretending</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="shots">
+        <img src="assets/shot1.jpg" alt="Wickerwood: the village at night" loading="lazy">
+        <img src="assets/shot2.jpg" alt="Wickerwood: a fight at night" loading="lazy">
+        <img src="assets/shot3.jpg" alt="Wickerwood: a boss, frozen" loading="lazy">
+        <img src="assets/shot4.jpg" alt="Wickerwood: the world from above" loading="lazy">
+      </div>
+      <p style="color: var(--dim); margin-top: 18px;">An early build: everything you see is work in progress. A Steam page is coming.</p>
+    </div>
+  </section>
+
+  <section id="studio">
+    <div class="wrap studio">
+      <img src="assets/logo.webp" alt="">
+      <div>
+        <h2>The studio</h2>
+        <p>Loti Studios is a small independent studio in Norway. We make games we would want to play ourselves, and we share them early. Wickerwood is our first game for Steam.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="follow">
+    <div class="wrap">
+      <h2>Follow the work</h2>
+      <p>Clips, progress and news as the game grows.</p>
+      <a class="btn" href="https://x.com/LotiStudios" rel="noopener">@LotiStudios on X</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">© 2026 Loti Studios</div>
+</footer>
+
+</body>
+</html>
