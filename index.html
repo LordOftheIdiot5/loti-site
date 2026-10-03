@@ -58,8 +58,8 @@ nav .links a:hover { color: var(--gold); text-decoration: none; }
   background: linear-gradient(180deg, rgba(11,10,8,0.55), rgba(11,10,8,0.8) 70%, var(--bg)), url("assets/hero.jpg") center / cover no-repeat;
   border-bottom: 1px solid var(--line);
 }
-.hero img.logo { width: min(420px, 78vw); height: auto; filter: drop-shadow(0 10px 40px rgba(232, 191, 106, 0.25)); }
-.hero h1 { font-size: clamp(34px, 6vw, 58px); color: var(--gold); margin-top: 6px; }
+.hero img.logo { width: min(440px, 80vw); height: auto; filter: drop-shadow(0 10px 40px rgba(232, 191, 106, 0.25)); }
+.hero h1 { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }   /* (the logo says it) */
 .hero p { color: var(--dim); font-size: 21px; margin: 8px 0 0; }
 
 section { padding: 72px 0; border-bottom: 1px solid var(--line); }
@@ -155,7 +155,7 @@ footer { padding: 28px 0 40px; color: var(--dim); font-size: 15px; text-align: c
 
 <nav>
   <div class="wrap">
-    <a class="brand" href="#top"><img src="assets/logo.webp" alt="Loti Studios"><span>LOTI STUDIOS</span></a>
+    <a class="brand" href="#top"><img src="assets/logo-mark.webp" alt="Loti Studios"><span>LOTI STUDIOS</span></a>
     <div class="links">
       <a href="#wickerwood">Wickerwood</a>
       <a href="#studio">Studio</a>
@@ -166,7 +166,7 @@ footer { padding: 28px 0 40px; color: var(--dim); font-size: 15px; text-align: c
 
 <header class="hero" id="top">
   <div class="wrap">
-    <img class="logo" src="assets/logo.webp" alt="Loti Studios">
+    <img class="logo" src="assets/logo-stacked.webp" alt="Loti Studios">
     <h1>Loti Studios</h1>
     <p>An independent game studio from Norway</p>
   </div>
@@ -242,7 +242,7 @@ footer { padding: 28px 0 40px; color: var(--dim); font-size: 15px; text-align: c
 
   <section id="studio">
     <div class="wrap studio">
-      <img src="assets/logo.webp" alt="">
+      <img src="assets/logo-mark.webp" alt="">
       <div>
         <h2>The studio</h2>
         <p>Loti Studios is a small independent studio in Norway. We make games we would want to play ourselves, and we share them early. Wickerwood is our first game for Steam.</p>
