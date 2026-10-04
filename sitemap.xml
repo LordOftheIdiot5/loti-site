@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
   <url>
     <loc>https://loti.nordl.dev/</loc>
     <lastmod>2026-10-04</lastmod>
@@ -7,5 +7,23 @@
     <image:image><image:loc>https://loti.nordl.dev/assets/heart-of-the-wood.jpg</image:loc></image:image>
     <image:image><image:loc>https://loti.nordl.dev/assets/village-night.jpg</image:loc></image:image>
     <image:image><image:loc>https://loti.nordl.dev/assets/swarm.jpg</image:loc></image:image>
+    <video:video>
+      <video:thumbnail_loc>https://loti.nordl.dev/assets/wickerwood-poster.jpg</video:thumbnail_loc>
+      <video:title>Wickerwood: a first look</video:title>
+      <video:description>Wickerwood, a folk-horror defence game by Loti Studios: the village, the masked swarm, spells, a boss, ships, loot and the Codex.</video:description>
+      <video:content_loc>https://loti.nordl.dev/assets/wickerwood-clip.mp4</video:content_loc>
+      <video:duration>53</video:duration>
+      <video:publication_date>2026-10-01</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://loti.nordl.dev/assets/wickerwood-update-poster.jpg</video:thumbnail_loc>
+      <video:title>Wickerwood: new in the wood</video:title>
+      <video:description>New in Wickerwood by Loti Studios: Captain Wren's ship and wrecks after storms, starry nights over a lit village, deeper caves with wardens, and the Heart of the Wood.</video:description>
+      <video:content_loc>https://loti.nordl.dev/assets/wickerwood-update.mp4</video:content_loc>
+      <video:duration>34</video:duration>
+      <video:publication_date>2026-10-03</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
   </url>
 </urlset>
